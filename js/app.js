@@ -2,28 +2,8 @@
 const sketchPad = document.getElementById('sketchPad');
 sketchPad.setAttribute(
   'style',
-  'display: grid; grid-template-columns: repeat(16, 1fr); grid-template-rows: repeat(16, 1fr); padding: 2px; min-height: 502px;'
+  'display: grid; grid-template-columns: repeat(16, 1fr); grid-template-rows: repeat(16, 1fr); padding: 2px;'
 );
-
-// build sketch pad
-function resolution(pixels) {
-  for (let i = 0; i < pixels; i++) {
-    const displayBlock = document.createElement('div');
-    displayBlock.setAttribute(
-      `style`,
-      `height: 100%; width: 100%; background: rgb(24, 24, 24);`
-    );
-    sketchPad.appendChild(displayBlock);
-
-    let opacity = 0;
-
-    displayBlock.addEventListener('mouseover', function () {
-      displayBlock.style.backgroundColor = 'white';
-      opacity += 0.15;
-      displayBlock.style.opacity = opacity;
-    });
-  }
-}
 
 // buttons container
 const ctrlBtns = document.getElementById('ctrlBtns');
@@ -70,6 +50,26 @@ function clearGrid() {
   }
 }
 
+// build sketch pad
+function resolution(pixels) {
+  for (let i = 0; i < pixels; i++) {
+    const displayBlock = document.createElement('div');
+    displayBlock.setAttribute(
+      `style`,
+      `height: 100%; width: 100%; background: rgb(24, 24, 24);`
+    );
+    sketchPad.appendChild(displayBlock);
+
+    let opacity = 0;
+
+    displayBlock.addEventListener('mouseover', function () {
+      displayBlock.style.backgroundColor = 'white';
+      opacity += 0.15;
+      displayBlock.style.opacity = opacity;
+    });
+  }
+}
+
 // change grid size
 const sizeButtons = document.getElementsByTagName('button');
 
@@ -78,21 +78,21 @@ for (let i = 0; i < sizeButtons.length; i++) {
     if (this.id === 'size-1') {
       sketchPad.setAttribute(
         'style',
-        'display: grid; grid-template-columns: repeat(16, 1fr); grid-template-rows: repeat(16, 1fr); min-height: 502px;'
+        'display: grid; grid-template-columns: repeat(16, 1fr); grid-template-rows: repeat(16, 1fr);'
       );
       clearGrid();
       resolution(256);
     } else if (this.id === 'size-2') {
       sketchPad.setAttribute(
         'style',
-        'display: grid; grid-template-columns: repeat(32, 1fr); grid-template-rows: repeat(32, 1fr); min-height: 502px;'
+        'display: grid; grid-template-columns: repeat(32, 1fr); grid-template-rows: repeat(32, 1fr);'
       );
       clearGrid();
       resolution(1024);
     } else if (this.id === 'size-3') {
       sketchPad.setAttribute(
         'style',
-        'display: grid; grid-template-columns: repeat(64, 1fr); grid-template-rows: repeat(64, 1fr); min-height: 502px;'
+        'display: grid; grid-template-columns: repeat(64, 1fr); grid-template-rows: repeat(64, 1fr);'
       );
       clearGrid();
       resolution(4096);
