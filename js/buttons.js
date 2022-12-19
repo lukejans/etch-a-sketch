@@ -70,6 +70,5 @@ for (let i = 0; i < sizeButtons.length; i++) {
       clearGrid();
       resolution(4096, 6.25);
     }
-    // clear function
   });
 }
