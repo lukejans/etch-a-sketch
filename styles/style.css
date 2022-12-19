@@ -22,11 +22,11 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 402px;
+  width: 502px;
 }
 /* game layout */
 #ctrlBtns,
 #sketchPad {
-  max-width: 700px;
+  min-width: 502px;
   border: 1px solid cornflowerblue;
 }

@@ -2,7 +2,7 @@
 const sketchPad = document.getElementById('sketchPad');
 sketchPad.setAttribute(
   'style',
-  'display: grid; grid-template-columns: repeat(16, 1fr); grid-template-rows: repeat(16, 1fr); padding: 2px; min-height: 402px;'
+  'display: grid; grid-template-columns: repeat(16, 1fr); grid-template-rows: repeat(16, 1fr); padding: 2px; min-height: 502px;'
 );
 
 // build sketch pad
@@ -78,21 +78,21 @@ for (let i = 0; i < sizeButtons.length; i++) {
     if (this.id === 'size-1') {
       sketchPad.setAttribute(
         'style',
-        'display: grid; grid-template-columns: repeat(16, 1fr); grid-template-rows: repeat(16, 1fr); min-height: 402px;'
+        'display: grid; grid-template-columns: repeat(16, 1fr); grid-template-rows: repeat(16, 1fr); min-height: 502px;'
       );
       clearGrid();
       resolution(256);
     } else if (this.id === 'size-2') {
       sketchPad.setAttribute(
         'style',
-        'display: grid; grid-template-columns: repeat(32, 1fr); grid-template-rows: repeat(32, 1fr); min-height: 402px;'
+        'display: grid; grid-template-columns: repeat(32, 1fr); grid-template-rows: repeat(32, 1fr); min-height: 502px;'
       );
       clearGrid();
       resolution(1024);
     } else if (this.id === 'size-3') {
       sketchPad.setAttribute(
         'style',
-        'display: grid; grid-template-columns: repeat(64, 1fr); grid-template-rows: repeat(64, 1fr); min-height: 402px;'
+        'display: grid; grid-template-columns: repeat(64, 1fr); grid-template-rows: repeat(64, 1fr); min-height: 502px;'
       );
       clearGrid();
       resolution(4096);
