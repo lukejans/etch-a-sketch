@@ -68,21 +68,19 @@ let drawing = false;
 console.log(drawing);
 
 document.addEventListener('mousedown', function () {
-  console.log(MouseEvent);
-
   drawing = true;
   console.log(drawing);
 });
 document.addEventListener('mouseup', function () {
-  console.log(MouseEvent);
-
   drawing = false;
   console.log(drawing);
 });
+
 function draw(display) {
   display.addEventListener('mouseover', function () {
-    display.style.backgroundColor = 'white';
-    console.log(MouseEvent);
+    if (drawing === true) {
+      display.style.backgroundColor = 'white';
+    }
   });
 }
 
