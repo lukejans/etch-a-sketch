@@ -22,6 +22,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 402px;
 }
 /* game layout */
 #ctrlBtns,

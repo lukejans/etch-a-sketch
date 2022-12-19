@@ -2,7 +2,7 @@
 const ctrlBtns = document.getElementById('ctrlBtns');
 ctrlBtns.setAttribute(
   'style',
-  'display: flex; gap: 20px; justify-content: center;'
+  'display: flex; gap: 20px; justify-content: center; align-items: center;'
 );
 
 // size buttons container
@@ -10,7 +10,7 @@ const sizeBtns = document.createElement('div');
 ctrlBtns.appendChild(sizeBtns);
 sizeBtns.setAttribute(
   'style',
-  'display: flex; gap: 10px; align-items: center;'
+  'display: flex; gap: 10px; align-items: center; justify-content: center;'
 );
 
 // size buttons

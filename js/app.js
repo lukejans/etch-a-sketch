@@ -16,7 +16,7 @@ function resolution(pixels, width) {
     sketchPad.appendChild(displayBlock);
 
     displayBlock.addEventListener('mouseover', function () {
-      displayBlock.style.backgroundColor = 'cornflowerblue';
+      displayBlock.style.backgroundColor = 'white';
     });
   }
 }
