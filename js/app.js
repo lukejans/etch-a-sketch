@@ -15,6 +15,6 @@ for (let i = 0; i < 256; i++) {
   sketchPad.appendChild(displayBlock);
 
   displayBlock.addEventListener('mouseover', function () {
-    displayBlock.style.backgroundColor = 'red';
+    displayBlock.style.backgroundColor = 'cornflowerblue';
   });
 }
