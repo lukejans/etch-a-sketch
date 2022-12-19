@@ -54,7 +54,7 @@ function clearGrid() {
 }
 
 // BUILD THE SKETCH PAD //
-// this function is called the argument as number
+// this function is called passing the argument as number
 // of pixels, it loops around until all of the boxes
 // have been created and added to the sketchPad container
 // then calls the draw() function passing displayBlock
