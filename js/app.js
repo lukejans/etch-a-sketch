@@ -15,8 +15,12 @@ function resolution(pixels, width) {
     );
     sketchPad.appendChild(displayBlock);
 
+    let opacity = 0;
+
     displayBlock.addEventListener('mouseover', function () {
       displayBlock.style.backgroundColor = 'white';
+      opacity += 0.1;
+      displayBlock.style.opacity = opacity;
     });
   }
 }
