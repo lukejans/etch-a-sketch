@@ -59,15 +59,31 @@ function resolution(pixels) {
       `height: 100%; width: 100%; background: rgb(24, 24, 24);`
     );
     sketchPad.appendChild(displayBlock);
-
-    let opacity = 0;
-
-    displayBlock.addEventListener('mouseover', function () {
-      displayBlock.style.backgroundColor = 'white';
-      opacity += 0.15;
-      displayBlock.style.opacity = opacity;
-    });
+    draw(displayBlock);
   }
+}
+
+// draw
+let drawing = false;
+console.log(drawing);
+
+document.addEventListener('mousedown', function () {
+  console.log(MouseEvent);
+
+  drawing = true;
+  console.log(drawing);
+});
+document.addEventListener('mouseup', function () {
+  console.log(MouseEvent);
+
+  drawing = false;
+  console.log(drawing);
+});
+function draw(display) {
+  display.addEventListener('mouseover', function () {
+    display.style.backgroundColor = 'white';
+    console.log(MouseEvent);
+  });
 }
 
 // change grid size
