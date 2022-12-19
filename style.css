@@ -1,0 +1,38 @@
+/* setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(24, 24, 24);
+  color: rgb(241, 241, 241);
+  font-family: monospace, sans-serif;
+  height: 100vh;
+}
+.wrapper {
+  gap: 20px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/* game layout */
+#ctrlBtns,
+#sketchPad {
+  min-width: 700px;
+  border: 2px solid cornflowerblue;
+}
+#ctrlBtns {
+  min-height: 50px;
+}
+#sketchPad {
+  min-height: 400px;
+  display: grid;
+}
