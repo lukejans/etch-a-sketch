@@ -27,8 +27,5 @@ main {
 #ctrlBtns,
 #sketchPad {
   max-width: 700px;
-  border: 2px solid cornflowerblue;
-}
-#ctrlBtns {
-  min-height: 50px;
+  border: 1px solid cornflowerblue;
 }

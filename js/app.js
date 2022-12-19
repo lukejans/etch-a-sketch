@@ -6,15 +6,17 @@ sketchPad.setAttribute(
 );
 
 // build sketch pad
-for (let i = 0; i < 256; i++) {
-  const displayBlock = document.createElement('div');
-  displayBlock.setAttribute(
-    'style',
-    'height: 25px; width: 25px; background: rgb(24, 24, 24);'
-  );
-  sketchPad.appendChild(displayBlock);
+function resolution(pixels, width) {
+  for (let i = 0; i < pixels; i++) {
+    const displayBlock = document.createElement('div');
+    displayBlock.setAttribute(
+      `style`,
+      `height: ${width}px; width: ${width}px; background: rgb(24, 24, 24);`
+    );
+    sketchPad.appendChild(displayBlock);
 
-  displayBlock.addEventListener('mouseover', function () {
-    displayBlock.style.backgroundColor = 'cornflowerblue';
-  });
+    displayBlock.addEventListener('mouseover', function () {
+      displayBlock.style.backgroundColor = 'cornflowerblue';
+    });
+  }
 }
